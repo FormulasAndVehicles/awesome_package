@@ -20,7 +20,7 @@ class MyFirstNode(Node):
         # name. The last argument specifies the queue length
         self.my_publisher = self.create_publisher(ActuatorControls,
                                                   'thruster_controls', 1)
-        self.timer = self.create_timer(1 / 500, self.on_timer)
+        self.timer = self.create_timer(1 / 50, self.on_timer)
 
     def on_timer(self):
         self.publish_my_msg()
